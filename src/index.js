@@ -24,11 +24,11 @@ const createWindow = () => {
   
   mainWindow.setMenuBarVisibility(false);
 
-  // if (process.env.NODE_ENV !== 'development') {
-  //   mainWindow.webContents.on('devtools-opened', () => {
-  //     mainWindow.webContents.closeDevTools();
-  //   });
-  // }
+  if (process.env.NODE_ENV !== 'development') {
+    mainWindow.webContents.on('devtools-opened', () => {
+      mainWindow.webContents.closeDevTools();
+    });
+  }
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
