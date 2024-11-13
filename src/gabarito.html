@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>ONHB - Alterar Gabarito</title>
+    <script defer src="gabarito.js"></script>
+  </head>
+  <body>
+    
+    <div id="webcrumbs" class="section">
+
+      <!-- <div class="notification is-danger is-align-self-center" style="display: none;">
+        <button id="responseMessage" class="delete"></button>
+      </div> -->
+
+      <a class="title is-6 has-text-danger has-text-centered" href="index.html">Rank</a>
+
+      <div class="question-box">
+        <h1 class="title is-4 has-text-danger has-text-centered">Gabarito ONHB</h1>
+        
+        <form id="questionnaireForm" class="space-y-6">
+
+          <!-- Question Template -->
+          <div class="mb-5">
+            <label class="question-title">Questão 1</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question1A" name="question1A" >
+              <label for="question1A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question1B" name="question1B" >
+              <label for="question1B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question1C" name="question1C" >
+              <label for="question1C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question1D" name="question1D" >
+              <label for="question1D">D</label>
+            </div>
+          </div>
+    
+          <!-- Repeat questions with minor changes -->
+          <div class="mb-5">
+            <label class="question-title">Questão 2 </label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question2A" name="question2A" >
+              <label for="question2A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question2B" name="question2B" >
+              <label for="question2B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question2C" name="question2C" >
+              <label for="question2C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question2D" name="question2D" >
+              <label for="question2D">D</label>
+            </div>
+          </div>
+    
+          <!-- Add questions 3-15 in the same format -->
+          <!-- Example for Question 3 -->
+          <div class="mb-5">
+            <label class="question-title">Questão 3</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question3A" name="question3A" >
+              <label for="question3A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question3B" name="question3B" >
+              <label for="question3B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question3C" name="question3C" >
+              <label for="question3C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question3D" name="question3D" >
+              <label for="question3D">D</label>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <label class="question-title">Questão 4</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question4A" name="question4A" >
+              <label for="question4A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question4B" name="question4B" >
+              <label for="question4B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question4C" name="question4C" >
+              <label for="question4C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question4D" name="question4D" >
+              <label for="question4D">D</label>
+            </div>
+          </div>
+          
+          
+          <div class="mb-5">
+            <label class="question-title">Questão 5</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question5A" name="question5A" >
+              <label for="question5A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question5B" name="question5B" >
+              <label for="question5B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question5C" name="question5C" >
+              <label for="question5C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question5D" name="question5D" >
+              <label for="question5D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 6</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question6A" name="question6A" >
+              <label for="question6A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question6B" name="question6B" >
+              <label for="question6B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question6C" name="question6C" >
+              <label for="question6C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question6D" name="question6D" >
+              <label for="question6D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 7</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question7A" name="question7A" >
+              <label for="question7A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question7B" name="question7B" >
+              <label for="question7B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question7C" name="question7C" >
+              <label for="question7C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question7D" name="question7D" >
+              <label for="question7D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 8</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question8A" name="question8A" >
+              <label for="question8A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question8B" name="question8B" >
+              <label for="question8B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question8C" name="question8C" >
+              <label for="question8C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question8D" name="question8D" >
+              <label for="question8D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 9</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question9A" name="question9A" >
+              <label for="question9A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question9B" name="question9B" >
+              <label for="question9B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question9C" name="question9C" >
+              <label for="question9C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question9D" name="question9D" >
+              <label for="question9D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 10</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question10A" name="question10A" >
+              <label for="question10A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question10B" name="question10B" >
+              <label for="question10B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question10C" name="question10C" >
+              <label for="question10C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question10D" name="question10D" >
+              <label for="question10D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 11</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question11A" name="question11A" >
+              <label for="question11A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question11B" name="question11B" >
+              <label for="question11B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question11C" name="question11C" >
+              <label for="question11C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question11D" name="question11D" >
+              <label for="question11D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 12</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question12A" name="question12A" >
+              <label for="question12A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question12B" name="question12B" >
+              <label for="question12B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question12C" name="question12C" >
+              <label for="question12C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question12D" name="question12D" >
+              <label for="question12D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 13</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question13A" name="question13A" >
+              <label for="question13A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question13B" name="question13B" >
+              <label for="question13B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question13C" name="question13C" >
+              <label for="question13C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question13D" name="question13D" >
+              <label for="question13D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 14</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question14A" name="question14A" >
+              <label for="question14A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question14B" name="question14B" >
+              <label for="question14B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question14C" name="question14C" >
+              <label for="question14C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question14D" name="question14D" >
+              <label for="question14D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 15</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question15A" name="question15A" >
+              <label for="question15A">A</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question15B" name="question15B" >
+              <label for="question15B">B</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question15C" name="question15C" >
+              <label for="question15C">C</label>
+              <input type="number" min="0" max="5" oninput="validateEntry(this)" id="question15D" name="question15D" >
+              <label for="question15D">D</label>
+            </div>
+          </div>
+
+          
+
+
+          
+          <button id="submitButton" type="submit" class="button is-danger mt-4">Enviar</button>
+          
+        </form>
+        <span class="tag is-danger is-light is-normal mt-4" id="responseMessage"></span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Corretor ONHB</strong> por <a href="https://ilusinusmate.github.io/Ilusinusmate">João G. S. Paiva</a>.
+        Código fonte licessiado
+        <a href="https://opensource.org/license/mit">MIT</a>. Esta aplicação é de código aberto e gratuita para uso, de livre distribuição. Disponível em
+        <a href="https://github.com/Ilusinusmate/ONHB"
+          >Github</a
+        >.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

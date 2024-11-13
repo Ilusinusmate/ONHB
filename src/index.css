@@ -1,0 +1,97 @@
+.section {
+  width: 600px;
+  padding: 2rem;
+  margin: auto;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+.question-subtext {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+.radio-options label {
+  margin-right: 1.5rem;
+}
+
+.question-box {
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#questionnaireForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.control, .mb-5 {
+  width: 100%;
+  text-align: center;
+}
+.question-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.radio-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.radio label {
+  position: relative;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff3860; /* Cor danger */
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.radio input[type="radio"]:checked + label::before {
+  background-color: #ff3860; /* Cor danger preenchida quando selecionado */
+}
+
+.footer {
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+  bottom: 0;
+  width: 600px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #3273dc; /* Bulma's primary color */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

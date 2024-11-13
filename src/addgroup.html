@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>ONHB - Cadastrar Equipe</title>
+    <script defer src="render.js"></script>
+  </head>
+  <body>
+    
+    <div id="webcrumbs" class="section">
+
+      <!-- <div class="notification is-danger is-align-self-center" style="display: none;">
+        <button id="responseMessage" class="delete"></button>
+      </div> -->
+
+      <a class="title is-6 has-text-danger has-text-centered" href="index.html">Rank</a>
+
+      <div class="question-box">
+        <h1 class="title is-4 has-text-danger has-text-centered">Corretor ONHB</h1>
+        
+        <form id="questionnaireForm" class="space-y-6">
+
+          <div class="control is-danger">
+            <input
+              id="groupName"
+              class="input is-small mb-4"
+              type="text"
+              name="groupName"
+              placeholder="Nome da Equipe"
+            />
+          </div>
+
+          <!-- Question Template -->
+          <div class="mb-5">
+            <label class="question-title">Questão 1</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question1A" name="question1" value="A">
+              <label for="question1A">A</label>
+              <input type="radio" id="question1B" name="question1" value="B">
+              <label for="question1B">B</label>
+              <input type="radio" id="question1C" name="question1" value="C">
+              <label for="question1C">C</label>
+              <input type="radio" id="question1D" name="question1" value="D">
+              <label for="question1D">D</label>
+            </div>
+          </div>
+    
+          <!-- Repeat questions with minor changes -->
+          <div class="mb-5">
+            <label class="question-title">Questão 2 </label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question2A" name="question2" value="A">
+              <label for="question2A">A</label>
+              <input type="radio" id="question2B" name="question2" value="B">
+              <label for="question2B">B</label>
+              <input type="radio" id="question2C" name="question2" value="C">
+              <label for="question2C">C</label>
+              <input type="radio" id="question2D" name="question2" value="D">
+              <label for="question2D">D</label>
+            </div>
+          </div>
+    
+          <!-- Add questions 3-15 in the same format -->
+          <!-- Example for Question 3 -->
+          <div class="mb-5">
+            <label class="question-title">Questão 3</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question3A" name="question3" value="A">
+              <label for="question3A">A</label>
+              <input type="radio" id="question3B" name="question3" value="B">
+              <label for="question3B">B</label>
+              <input type="radio" id="question3C" name="question3" value="C">
+              <label for="question3C">C</label>
+              <input type="radio" id="question3D" name="question3" value="D">
+              <label for="question3D">D</label>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <label class="question-title">Questão 4</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question4A" name="question4" value="A">
+              <label for="question4A">A</label>
+              <input type="radio" id="question4B" name="question4" value="B">
+              <label for="question4B">B</label>
+              <input type="radio" id="question4C" name="question4" value="C">
+              <label for="question4C">C</label>
+              <input type="radio" id="question4D" name="question4" value="D">
+              <label for="question4D">D</label>
+            </div>
+          </div>
+          
+          
+          <div class="mb-5">
+            <label class="question-title">Questão 5</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question5A" name="question5" value="A">
+              <label for="question5A">A</label>
+              <input type="radio" id="question5B" name="question5" value="B">
+              <label for="question5B">B</label>
+              <input type="radio" id="question5C" name="question5" value="C">
+              <label for="question5C">C</label>
+              <input type="radio" id="question5D" name="question5" value="D">
+              <label for="question5D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 6</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question6A" name="question6" value="A">
+              <label for="question6A">A</label>
+              <input type="radio" id="question6B" name="question6" value="B">
+              <label for="question6B">B</label>
+              <input type="radio" id="question6C" name="question6" value="C">
+              <label for="question6C">C</label>
+              <input type="radio" id="question6D" name="question6" value="D">
+              <label for="question6D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 7</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question7A" name="question7" value="A">
+              <label for="question7A">A</label>
+              <input type="radio" id="question7B" name="question7" value="B">
+              <label for="question7B">B</label>
+              <input type="radio" id="question7C" name="question7" value="C">
+              <label for="question7C">C</label>
+              <input type="radio" id="question7D" name="question7" value="D">
+              <label for="question7D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 8</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question8A" name="question8" value="A">
+              <label for="question8A">A</label>
+              <input type="radio" id="question8B" name="question8" value="B">
+              <label for="question8B">B</label>
+              <input type="radio" id="question8C" name="question8" value="C">
+              <label for="question8C">C</label>
+              <input type="radio" id="question8D" name="question8" value="D">
+              <label for="question8D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 9</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question9A" name="question9" value="A">
+              <label for="question9A">A</label>
+              <input type="radio" id="question9B" name="question9" value="B">
+              <label for="question9B">B</label>
+              <input type="radio" id="question9C" name="question9" value="C">
+              <label for="question9C">C</label>
+              <input type="radio" id="question9D" name="question9" value="D">
+              <label for="question9D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 10</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question10A" name="question10" value="A">
+              <label for="question10A">A</label>
+              <input type="radio" id="question10B" name="question10" value="B">
+              <label for="question10B">B</label>
+              <input type="radio" id="question10C" name="question10" value="C">
+              <label for="question10C">C</label>
+              <input type="radio" id="question10D" name="question10" value="D">
+              <label for="question10D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 11</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question11A" name="question11" value="A">
+              <label for="question11A">A</label>
+              <input type="radio" id="question11B" name="question11" value="B">
+              <label for="question11B">B</label>
+              <input type="radio" id="question11C" name="question11" value="C">
+              <label for="question11C">C</label>
+              <input type="radio" id="question11D" name="question11" value="D">
+              <label for="question11D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 12</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question12A" name="question12" value="A">
+              <label for="question12A">A</label>
+              <input type="radio" id="question12B" name="question12" value="B">
+              <label for="question12B">B</label>
+              <input type="radio" id="question12C" name="question12" value="C">
+              <label for="question12C">C</label>
+              <input type="radio" id="question12D" name="question12" value="D">
+              <label for="question12D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 13</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question13A" name="question13" value="A">
+              <label for="question13A">A</label>
+              <input type="radio" id="question13B" name="question13" value="B">
+              <label for="question13B">B</label>
+              <input type="radio" id="question13C" name="question13" value="C">
+              <label for="question13C">C</label>
+              <input type="radio" id="question13D" name="question13" value="D">
+              <label for="question13D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 14</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question14A" name="question14" value="A">
+              <label for="question14A">A</label>
+              <input type="radio" id="question14B" name="question14" value="B">
+              <label for="question14B">B</label>
+              <input type="radio" id="question14C" name="question14" value="C">
+              <label for="question14C">C</label>
+              <input type="radio" id="question14D" name="question14" value="D">
+              <label for="question14D">D</label>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label class="question-title">Questão 15</label>
+            <span class="question-subtext"></span>
+            <div class="radio-options mt-3">
+              <input type="radio" id="question15A" name="question15" value="A">
+              <label for="question15A">A</label>
+              <input type="radio" id="question15B" name="question15" value="B">
+              <label for="question15B">B</label>
+              <input type="radio" id="question15C" name="question15" value="C">
+              <label for="question15C">C</label>
+              <input type="radio" id="question15D" name="question15" value="D">
+              <label for="question15D">D</label>
+            </div>
+          </div>
+
+          
+
+
+          
+          <button id="submitButton" type="submit" class="button is-danger mt-4">Enviar</button>
+          
+        </form>
+        <span class="tag is-danger is-light is-normal mt-4" id="responseMessage"></span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Corretor ONHB</strong> por <a href="https://ilusinusmate.github.io/Ilusinusmate">João G. S. Paiva</a>.
+        Código fonte licessiado
+        <a href="https://opensource.org/license/mit">MIT</a>. Esta aplicação é de código aberto e gratuita para uso, de livre distribuição. Disponível em
+        <a href="https://github.com/Ilusinusmate/ONHB"
+          >Github</a
+        >.
+      </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

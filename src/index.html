@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>ONHB - Rank de Equipes</title>
+  <script src="rank.js"></script>
+</head>
+<body>
+    <div id="webcrumbs" class="section">
+        
+        <div class="question-box">
+            <h1 class="title is-4 has-text-danger has-text-centered">Rank de Equipes</h1>
+            <a class="title is-6 has-text-danger" style="margin-right: 5rem;" href="addgroup.html">Adicionar Equipe +</a>
+            <a class="title is-6 has-text-danger" style="margin-left: 5rem;" href="gabarito.html">Alterar Gabarito</a>
+        </div>
+        
+        <br>
+        <hr style="border-width: 3px; border-radius: 1.0rem; border-color: #d9d9d9;">
+        <br>
+        
+        <div class="question-box">
+            <h1 class="title is-6 has-text-danger has-text-centered">Classificação Geral</h1>
+            
+            <span class="tag is-danger is-light is-normal" id="responseMessage"></span>
+            
+            <table class="table is-fullwidth is-light is-danger is-striped" >
+                <thead>
+                    <tr class="is-danger">
+                        <th>Colocação</th>
+                        <th>Nome da Equipe</th>
+                        <th>Potuação</th>
+                        <th><span class="icon"><i class="fas fa-info-circle"></i></span></th>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                </thead>                
+                <tbody id="table-body">
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Corretor ONHB</strong> por <a href="https://ilusinusmate.github.io/Ilusinusmate">João G. S. Paiva</a>.
+            Código fonte licessiado
+            <a href="https://opensource.org/license/mit">MIT</a>. Esta aplicação é de código aberto e gratuita para uso, de livre distribuição. Disponível em
+            <a href="https://github.com/Ilusinusmate/ONHB"
+              >Github</a
+            >.
+          </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
